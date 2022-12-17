@@ -1,0 +1,44 @@
+class Sure:
+    def __init__(self, name):
+        self.name = name
+
+
+
+
+
+class Age:
+    def __init__(self, age):
+        self.age = age
+
+class World(Sure):
+    def world(self):
+        print(f'{self.name} to take the World Cup')
+
+
+class Cup(Age):
+   pass
+
+
+class Last(World, Cup):
+    def __init__(self, name, age):
+        World.__init__(self, name)
+        Cup.__init__(self, age)
+
+test = Last('Argentina', 206)
+test.world()
+
+
+
+with open('git_codes.txt', 'w', encoding='utf-8') as file:
+    file.write('git init \n'
+               'git remote remove origin\n'
+               'git remote add origin\n'
+               'git add .\n'
+               'git commit -m "commentary"\n'
+               'git push origin master\n'
+               'git branch\n'
+               'git checkout -b master1\n'
+               'git branch -d master1\n'
+               'git branch master2\n'
+               'git chechout master 2\n'
+               'git clone')
